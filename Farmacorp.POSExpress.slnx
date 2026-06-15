@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Farmacorp.POSExpress.Aplicacion/Farmacorp.POSExpress.Aplicacion.csproj" />
+  <Project Path="Farmacorp.POSExpress.Dominio/Farmacorp.POSExpress.Dominio.csproj" />
+  <Project Path="Farmacorp.POSExpress.Infraestructura/Farmacorp.POSExpress.Infraestructura.csproj" />
+  <Project Path="Farmacorp.POSExpress.Presentacion/Farmacorp.POSExpress.Presentacion.csproj" />
+</Solution>
