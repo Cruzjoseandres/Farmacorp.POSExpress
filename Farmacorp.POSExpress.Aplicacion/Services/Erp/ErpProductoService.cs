@@ -1,4 +1,4 @@
-﻿using Farmacorp.POSExpress.Aplicacion.Interfaces.Erp;
+using Farmacorp.POSExpress.Aplicacion.Interfaces.Erp;
 using Farmacorp.POSExpress.Dominio.Interfaces;
 using Farmacorp.POSExpress.Dominio.Models.Erp;
 using Farmacorp.POSExpress.Dominio.Models.Express;
@@ -18,7 +18,7 @@ namespace Farmacorp.POSExpress.Aplicacion.Services.Erp
             _unitOfWork = unitOfWork;
             _reglasNegocio = reglasNegocio;
         }
-        public async Task RegistrarProductoErpAsync(int idProducto, decimal costo)
+        public async Task RegistrarProductoErpAsync(int idProducto, decimal costo, int stock)
         {
             var producto = await _unitOfWork.ExpProductos.GetByIdAsync(idProducto);
             if (producto == null)
@@ -40,7 +40,7 @@ namespace Farmacorp.POSExpress.Aplicacion.Services.Erp
                 Costo = costo,
                 UniqueCodigo = Guid.NewGuid().ToString("N").Substring(0,10).ToUpper(),
                 FechaRegistro = DateTime.UtcNow,
-                Stock = 0
+                Stock = stock
             };
 
             await _unitOfWork.ErpProductos.AddAsync(erpProducto);

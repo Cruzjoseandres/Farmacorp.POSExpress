@@ -1,11 +1,11 @@
-﻿using Farmacorp.POSExpress.Dominio.Interfaces.Erp;
+using Farmacorp.POSExpress.Dominio.Interfaces.Erp;
 using Farmacorp.POSExpress.Dominio.Models.Erp;
 using Farmacorp.POSExpress.Infraestructura.Data;
 using Farmacorp.POSExpress.Infraestructura.Mappers.Erp;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Data.Entity;
+using Microsoft.EntityFrameworkCore;
 using System.Text;
 
 namespace Farmacorp.POSExpress.Infraestructura.Repositories.Erp
